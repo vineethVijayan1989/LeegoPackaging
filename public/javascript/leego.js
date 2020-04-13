@@ -72,7 +72,6 @@ $(document).ready(function() {
 
   $('.blocks__name').click (function(){
    var aBlock, num;
-   alert ("Hello");
     num = $(this).index();
     aBlock = block.eq(num);
     if (!aBlock.hasClass('active')) {
