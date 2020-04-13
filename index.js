@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   res.render("index");
 });	
 
-app.listen(8020, () => {
-  console.log('Example app listening on port 8020!')
+app.listen(7000, () => {
+  console.log('Example app listening on port 7000!')
 });
 

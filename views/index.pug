@@ -1,7 +1,7 @@
 html
   head
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js")
     script(src='/javascript/leego.js')
   body
     // Demo stuff
@@ -16,11 +16,11 @@ html
       img.plate(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/plate.svg', alt='')
     // Component starts here
     ul.blocks-names
+      li.blocks__name History
       li.blocks__name Products
-      li.blocks__name Clientele
       li.blocks__name Videos
-      li.blocks__name Industry News
-      li.blocks__name Contact us
+      li.blocks__name Enquire
+      li.blocks__name Our Presence
     ul.blocks
       li#1.blocks__block
       li#2.blocks__block
@@ -30,27 +30,28 @@ html
     ul.blocks-content
       li.blocks-content__content
         .content__close
-        h2 Eggs
+        h2 History
         p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae modi esse, totam sequi non quae, rerum facilis nesciunt iusto praesentium officiis assumenda dignissimos. Saepe, facere incidunt. Laudantium quisquam asperiores sint.
+          | Brief History of the company
         i.blocks__content-close.fa.fa-close
       li.blocks-content__content
-        h2 Bacon
+        h2 Products
         p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ducimus voluptate velit quae cumque neque minima harum libero eligendi alias laboriosam ad, consequuntur error atque incidunt assumenda sapiente! Architecto, excepturi?
+          | Product Catalog
         i.blocks__content-close.fa.fa-close
       li.blocks-content__content
-        h2 Toast
+        h2 Videos
         p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint eligendi quis accusantium recusandae iusto sed, magni iure magnam, architecto quisquam pariatur minus, rem alias. Eum voluptatem maiores quae reiciendis cupiditate.
+          | Various machine and the corresponding videos
         i.blocks__content-close.fa.fa-close
       li.blocks-content__content
-        h2 Donuts
+        h2 Enquire
         p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus officiis voluptates et, atque animi quae hic dolorem neque magnam reprehenderit sint dolor omnis modi mollitia labore quidem aspernatur ab architecto.
+          | A form which will request customers to enter minimum details which will let us contact them.
         i.blocks__content-close.fa.fa-close
       li.blocks-content__content
-        h2 Coffee
+        h2 Our Presence
         p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus officiis voluptates et, atque animi quae hic dolorem neque magnam reprehenderit sint dolor omnis modi mollitia labore quidem aspernatur ab architecto.
+          | A map showing our presence in the country
         i.blocks__content-close.fa.fa-close
+          | close
