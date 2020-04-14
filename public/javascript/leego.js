@@ -85,6 +85,24 @@ $(document).ready(function() {
     }
   });
 
+
+console.log(mymap);
 closeBtn.on('click', closeContent);  
-  
+var mymap = L.map('mapid').setView([11.127123, 78.656894], 6.5);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoidmluZWV0aHZpaiIsImEiOiJjazh6a2lvOWsxanB3M25va29tZmw3cmhwIn0.bhmQRTlPKObI0FgV29YZFQ'
+}).addTo(mymap);
+
+var marker = L.marker([11.677788, 78.134351]).addTo(mymap);
+marker.bindPopup("<b>Grand Aqua</b>").openPopup();
+var marker2 = L.marker([12.136402, 78.162555]).addTo(mymap);
+marker2.bindPopup("<b>Sri Aqua packers</b>").openPopup();
+var marker3 = L.marker([11.013475, 77.011653]).addTo(mymap);
+marker3.bindPopup("<b>Udayam packers</b>").openPopup();  
+ 
 });

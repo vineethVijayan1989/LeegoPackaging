@@ -1,8 +1,10 @@
 html
   head
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://unpkg.com/leaflet@1.6.0/dist/leaflet.css')
     script(src="https://code.jquery.com/jquery-3.4.1.min.js")
     script(src='/javascript/leego.js')
+    script(src='https://unpkg.com/leaflet@1.6.0/dist/leaflet.js')
   body
     // Demo stuff
     main
@@ -46,8 +48,7 @@ html
           | A form which will request customers to enter minimum details which will let us contact them.
         i.blocks__content-close.fa.fa-close
       li.blocks-content__content
-        h2 Our Presence
-        p
-          | A map showing our presence in the country
+        div#mapid
+          | Hello
         i.blocks__content-close.fa.fa-close
        
