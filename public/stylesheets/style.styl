@@ -3,16 +3,12 @@ $color2 = #db5b4a
 $color3 = #e2bb7f
 $color4 = #f67b7d
 $color5 = #a1775a
-
 *
   box-sizing: border-box
 body
   font-family: 'Open Sans'
   font-weight: 400
   text-align: center
-#mapid
-  height: 100%
-  width:  100%
 .blocks
   position: fixed
   bottom: 0
@@ -67,11 +63,11 @@ body
     top: 0
     left: 0
     height: 100vh
-    padding: 5vw
+    padding: 10vw
     font-size: 20px
     opacity: 0
     visibility: hidden
-    text-align: left
+    text-align: center
     transform: scale(0.9)
     transition: all .3s .2s ease-out
     &.active
@@ -123,32 +119,22 @@ body
 main
   position: relative
   z-index: 1
-  padding: 3vh 5vw
   height: 80vh
-  display: flex
-  flex-flow: column wrap
-  justify-content: center
   background: white
-  h1
-    margin: 0
-    font-weight: 300
-    color: #38C5B9
-    a
-      font-size: 48px
-  p
-    font-weight: 300
-    font-size: 16px
-    max-width: 340px
-    margin: 7px auto
-  a
-    text-decoration: none
-    color: #38C5B9
-    font-size: 30px
+  .image-div
+    width:600px;
+    height:70vh;
   .plate
     position: absolute
-    top: 50%
-    left: 50%
-    max-width: 380px
-    width: 100%
-    transform: translate(-50%, -50%)
-    z-index: -1
+    top: 0;
+    left: 25px;
+    width: 550px;
+    height: 70vh;
+    padding-left: 70px;
+   .contents-div
+    position: absolute
+    left: 650px;
+    top: 0;
+    height: 70vh;
+    width:100% - 600px;
+    
