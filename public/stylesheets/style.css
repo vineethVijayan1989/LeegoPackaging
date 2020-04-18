@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+#mapid {
+  height: 100%;
+  width: 100%;
+}
 body {
   font-family: 'Open Sans';
   font-weight: 400;
@@ -58,22 +62,16 @@ body {
 }
 .blocks-content__content {
   will-change: transform, opacity;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
   position: fixed;
   width: 100%;
   z-index: 3;
   top: 0;
   left: 0;
-  height: 100vh;
-  padding: 10vw;
+  height: 120vh;
+  padding: 5vh;
   font-size: 20px;
   opacity: 0;
   visibility: hidden;
-  text-align: center;
   transform: scale(0.9);
   transition: all 0.3s 0.2s ease-out;
 }
@@ -134,7 +132,33 @@ main {
   position: relative;
   z-index: 1;
   height: 80vh;
-  background: #fff;
+  display: block;
+  background-image: url("/images/HomePage_leego.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .navbar {
+  height: 10vh;
+  background-color: transparent !important;
+  border-color: transparent;
+  background-image: none;
+  box-shadow: none;
+}
+main .navbar-list {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+main .navbar-links {
+  list-style-type: none;
+  display: flex;
+  letter-spacing: 4px;
+}
+main .navbar-li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main .image-div {
   width: 600px;
@@ -154,4 +178,90 @@ main .contents-div {
   top: 0;
   height: 70vh;
   width: -500%;
+}
+.machine-videos {
+  height: 400px;
+  width: 900px;
+  bottom: 10%;
+  top: 15vh;
+  left: 30vh;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  background-color: #000;
+  overflow: hidden;
+}
+.image-container {
+  height: 400px;
+  width: 700px;
+  background-color: #000;
+  overflow: hidden;
+  order: 2;
+}
+.left-arrow {
+  height: 400px;
+  width: 100px;
+  background-color: #e2bb7f;
+  order: 1;
+  float: left;
+  padding-top: 180px;
+  text-align: center;
+}
+.right-arrow {
+  height: 400px;
+  width: 100px;
+  right: 0;
+  background-color: #e2bb7f;
+  order: 3;
+  float: right;
+  padding-top: 180px;
+  text-align: center;
+}
+.image-holder {
+  width: 2100px;
+  background-color: #e2bb7f;
+  height: 400px;
+  clear: both;
+  position: relative;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+}
+.slider-image {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+.button-holder {
+  position: absolute;
+  top: 490px;
+}
+.slider-change {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+#image1:target ~ .image-holder {
+  left: 0px;
+}
+#image2:target ~ .image-holder {
+  left: -700px;
+}
+#image3:target ~ .image-holder {
+  left: -1400px;
+}
+.video-description {
+  font-family: 'Calibri';
+  font-weight: 400;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 475px;
+  left: 200px;
 }

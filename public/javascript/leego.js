@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var bHeight, bWidth, block, bname, closeBtn, closeContent, content, expand, openContent, updateValues, wHeight, wWidth, xVal, yVal;
+  var bHeight, bWidth, block, bname, closeBtn, closeContent, content, expand, openContent, updateValues, wHeight, wWidth, xVal, yVal, currentVideo;
 
   block = $('.blocks__block');
 
@@ -20,7 +20,13 @@ $(document).ready(function() {
   xVal = Math.round(wWidth / bWidth) + 0.03;
 
   yVal = wHeight / bHeight + 0.03;
+ 
+  currentVideo = 1;
 
+  var descriptions = ["This is the image of a beautifull river banks",
+                      "This is the video of a lake during dawn",
+                      "This is a video a beautifull sunrise"
+                     ];
   openContent = function(num) {
     var aContent;
     content.css({
@@ -85,10 +91,8 @@ $(document).ready(function() {
     }
   });
 
-
-console.log(mymap);
 closeBtn.on('click', closeContent);  
-var mymap = L.map('mapid').setView([11.127123, 78.656894], 6.5);
+var mymap = L.map('mapid').setView([11.127123, 78.656894], 7);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -104,5 +108,39 @@ var marker2 = L.marker([12.136402, 78.162555]).addTo(mymap);
 marker2.bindPopup("<b>Sri Aqua packers</b>").openPopup();
 var marker3 = L.marker([11.013475, 77.011653]).addTo(mymap);
 marker3.bindPopup("<b>Udayam packers</b>").openPopup();  
+
+$('.video-description').html("<p>" + descriptions[0] + "</p>");
+
+$('.img-right-arrow').click(function() 
+{
+   if ( (currentVideo >= 1) && (currentVideo < 3 ) )
+   { 
+      $('.image-holder').animate({"left":"-=700px"},400);
+      currentVideo++;
+   }
+   else
+   {
+      return false;
+   }
+
+   $('.video-description').html("<p>" + descriptions[currentVideo - 1] + "</p>"); 
+});
+
+$('.img-left-arrow').click(function() 
+{
+   if ( (currentVideo > 1) && (currentVideo <= 3 ) )
+   { 
+      $('.image-holder').animate({"left":"+=700px"},400);
+      currentVideo--;
+   }
+   else
+   {
+      alert ("I am not decrementing!!!");
+      return false;
+   }
+
+   $('.video-description').html("<p>" + descriptions[currentVideo - 1] + "</p>");
+      
+}); 
  
 });

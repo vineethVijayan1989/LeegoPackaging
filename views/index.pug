@@ -8,13 +8,14 @@ html
   body
     // Demo stuff
     main
-       div.image-div
-        img.plate(src='/images/logo.png', alt='')
-       div.contents-div
-         h1
-           | Hello
+      div.navbar
+        div.navbar-list
+          ul.navbar-links
+            li.navbar-li Logo
+            l1.navbar-li Contact Us
+      div.image-main
     // Component starts here
-    ul.blocks-names
+    ul.blocks-names  
       li.blocks__name History
       li.blocks__name Products
       li.blocks__name Videos
@@ -39,9 +40,22 @@ html
           | Product Catalog
         i.blocks__content-close.fa.fa-close
       li.blocks-content__content
-        h2 Videos
-        p
-          | Various machine and the corresponding videos
+        div.machine-videos
+          span#image1
+          span#image2
+          span#image3
+          div.left-arrow
+            a(href="#image1")
+               img.img-left-arrow(src='/images/left-arrow.svg')
+          div.image-container
+            div.image-holder
+               video.slider-image(src='Videos/video1.mp4' width=700 height=400 controls)
+               video.slider-image(src='Videos/video2.mp4' width=700 height=400 controls)
+               video.slider-image(src='Videos/video3.mp4' width=700 height=400 controls)
+          div.right-arrow
+             a(href="#image1")
+               img.img-right-arrow(src='/images/right-arrow.svg')
+        div.video-description    
         i.blocks__content-close.fa.fa-close
       li.blocks-content__content
         h2 Enquire
